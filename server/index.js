@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
+require('./models/User');
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, err => {
   if (err) console.log(err);
